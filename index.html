@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Curso Técnico em Logística do CEET Vasco Coutinho – Formação prática em transporte, distribuição, armazenamento, cadeia de suprimentos e e-commerce. Conheça os projetos dos alunos e a feira de brindes." />
+  <meta name="keywords" content="Logística, Técnico em Logística, CEET Vasco Coutinho, curso técnico, transporte, distribuição, estoque" />
+  <meta name="author" content="CEET Vasco Coutinho – Curso Técnico em Logística" />
+  <title>Curso Técnico em Logística | CEET Vasco Coutinho</title>
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ========== HEADER / CABEÇALHO ========== -->
+  <header class="header" id="header" role="banner">
+    <div class="header__container">
+
+      <!-- Logo -->
+      <a href="#inicio" class="header__logo" aria-label="Início – Curso Técnico em Logística">
+        <img
+          src="img/logo-logistica.png"
+          alt="Logo do Curso Técnico em Logística – CEET Vasco Coutinho"
+          class="header__logo-img"
+          onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+        />
+        <span class="header__logo-fallback" aria-hidden="true">
+          <span class="header__logo-icon">📦</span>
+          <span class="header__logo-text">Logística<br><small>CEET Vasco Coutinho</small></span>
+        </span>
+      </a>
+
+      <!-- Logos Institucionais -->
+      <div class="header__institutional" aria-label="Logos institucionais do CEET Vasco Coutinho e Governo do Estado">
+        <img src="img/logo-vasco-coutinho.png" alt="Logo CEET Vasco Coutinho" class="header__inst-logo" />
+        <img src="img/logo-20-anos.png" alt="Logo 20 Anos CEET Vasco Coutinho" class="header__inst-logo" />
+        <img src="img/logo-universidades.png" alt="Logo Universidades / Governo do Estado" class="header__inst-logo" />
+      </div>
+
+      <!-- Botão hamburguer (mobile) -->
+      <button class="header__hamburger" id="hamburgerBtn" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="navMenu">
+        <span class="hamburger__line"></span>
+        <span class="hamburger__line"></span>
+        <span class="hamburger__line"></span>
+      </button>
+
+      <!-- Navegação -->
+      <nav class="header__nav" id="navMenu" role="navigation" aria-label="Menu principal">
+        <ul class="nav__list">
+          <li><a href="#inicio" class="nav__link">Início</a></li>
+          <li><a href="#sobre" class="nav__link">Sobre o Curso</a></li>
+          <li><a href="#projetos" class="nav__link">Projetos</a></li>
+          <li><a href="#brindes" class="nav__link">Brindes</a></li>
+          <li><a href="#mercado" class="nav__link">Mercado de Trabalho</a></li>
+          <li><a href="#contato" class="nav__link">Contato</a></li>
+        </ul>
+        <a href="#projetos" class="btn btn--accent nav__cta">Conheça nossos projetos</a>
+      </nav>
+
+      <!-- Ícone do carrinho no header -->
+      <button class="cart-icon-btn" id="cartIconBtn" aria-label="Abrir carrinho de brindes">
+        🛒 <span class="cart-badge" id="cartBadge">0</span>
+      </button>
+
+    </div>
+  </header>
+
+  <!-- ========== HERO / SEÇÃO PRINCIPAL ========== -->
+  <section class="hero" id="inicio" aria-labelledby="heroTitle">
+    <div class="hero__bg-shapes" aria-hidden="true">
+      <div class="shape shape--1"></div>
+      <div class="shape shape--2"></div>
+      <div class="shape shape--3"></div>
+    </div>
+
+    <div class="hero__container">
+      <div class="hero__content">
+        <span class="hero__badge">🎓 CEET Vasco Coutinho</span>
+        <h1 class="hero__title" id="heroTitle">Curso Técnico em<br><span class="highlight">Logística</span></h1>
+        <p class="hero__subtitle">Planejamento, transporte, distribuição, estoque e soluções para o mundo real.</p>
+        <p class="hero__text">
+          Uma formação prática e completa para atuar em <strong>transporte</strong>, <strong>distribuição</strong>,
+          <strong>armazenamento</strong>, <strong>cadeia de suprimentos</strong>, <strong>controle de estoque</strong>
+          e <strong>comércio eletrônico</strong>. Prepare-se para o mercado de trabalho com competência e inovação.
+        </p>
+        <div class="hero__buttons">
+          <a href="#projetos" class="btn btn--primary btn--lg" id="heroBtnProjetos">
+            📁 Ver Projetos dos Alunos
+          </a>
+          <a href="#brindes" class="btn btn--outline btn--lg" id="heroBtnBrindes">
+            🎁 Escolher meu Brinde
+          </a>
+        </div>
+      </div>
+
+      <div class="hero__visual" aria-hidden="true">
+        <div class="hero__illustration">
+          <div class="illus__scene">
+            <div class="illus__truck">🚛</div>
+            <div class="illus__box illus__box--1">📦</div>
+            <div class="illus__box illus__box--2">📦</div>
+            <div class="illus__box illus__box--3">📦</div>
+            <div class="illus__warehouse">🏭</div>
+            <div class="illus__route">
+              <div class="route__dot"></div>
+              <div class="route__line"></div>
+              <div class="route__dot"></div>
+              <div class="route__line"></div>
+              <div class="route__dot"></div>
+            </div>
+            <div class="illus__tech">💻</div>
+            <div class="illus__chart">📊</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Seta para rolar -->
+    <a href="#sobre" class="hero__scroll-arrow" aria-label="Rolar para a próxima seção">
+      <span class="scroll-arrow__icon">↓</span>
+    </a>
+  </section>
+
+  <!-- ========== SOBRE O CURSO ========== -->
+  <section class="section sobre" id="sobre" aria-labelledby="sobreTitle">
+    <div class="container">
+      <div class="section__header">
+        <span class="section__badge">📚 Conheça</span>
+        <h2 class="section__title" id="sobreTitle">Sobre o Curso</h2>
+        <p class="section__subtitle">
+          O Curso Técnico em Logística forma profissionais preparados para atuar no transporte, distribuição,
+          armazenamento e controle de produtos e mercadorias, contribuindo para a otimização dos processos
+          operacionais e para o atendimento das necessidades da sociedade e do mercado.
+        </p>
+      </div>
+
+      <div class="sobre__cards">
+        <!-- Card Duração -->
+        <div class="info-card info-card--duration">
+          <div class="info-card__icon" aria-hidden="true">⏱️</div>
+          <h3 class="info-card__title">Duração e Carga Horária</h3>
+          <div class="info-card__items">
+            <div class="duration-item">
+              <span class="duration-item__period">🌅 Matutino &amp; 🌇 Vespertino</span>
+              <span class="duration-item__info"><strong>1 ano</strong> — 2 módulos</span>
+            </div>
+            <div class="duration-item">
+              <span class="duration-item__period">🌙 Noturno</span>
+              <span class="duration-item__info"><strong>1 ano e 6 meses</strong> — 3 módulos</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card Coordenação -->
+        <div class="info-card info-card--coord">
+          <div class="info-card__icon" aria-hidden="true">👩‍🏫</div>
+          <h3 class="info-card__title">Coordenação do Curso</h3>
+          <div class="info-card__items">
+            <div class="coord-item">
+              <span class="coord-item__period">🌅 Matutino</span>
+              <span class="coord-item__name">Débora Rosa Stein</span>
+            </div>
+            <div class="coord-item">
+              <span class="coord-item__period">🌇 Vespertino</span>
+              <span class="coord-item__name">Renata Oliveira</span>
+            </div>
+            <div class="coord-item">
+              <span class="coord-item__period">🌙 Noturno</span>
+              <span class="coord-item__name">Luciana Gouveia</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card Escola -->
+        <div class="info-card info-card--school">
+          <div class="info-card__icon" aria-hidden="true">🏫</div>
+          <h3 class="info-card__title">CEET Vasco Coutinho</h3>
+          <p class="info-card__text">
+            Centro Estadual de Educação Técnica, referência em formação profissional no Espírito Santo.
+            Excelência, inovação e preparação para o mercado de trabalho.
+          </p>
+          <div class="info-card__tags">
+            <span class="tag">Educação Técnica</span>
+            <span class="tag">Espírito Santo</span>
+            <span class="tag">Qualidade</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CYBER LOGÍSTICA ========== -->
+  <section class="section cyber-logistica" id="cyber-logistica" aria-labelledby="cyberTitle">
+    <div class="container">
+      <div class="section__header">
+        <span class="section__badge">⚡ Inovação e Fluxo</span>
+        <h2 class="section__title" id="cyberTitle">Cyber Logística</h2>
+        <p class="section__subtitle">
+          Tecnologia que conecta, automatiza e entrega. Conheça as etapas do fluxo logístico de ponta a ponta.
+        </p>
+      </div>
+
+      <div class="cyber__grid">
+        <!-- Card 1: Etapas 1 a 4 -->
+        <article class="cyber-card" aria-labelledby="cardTitle1">
+          <div class="cyber-card__content">
+            <h3 class="cyber-card__title" id="cardTitle1">Etapas 1 a 4: Fluxo Interno</h3>
+            <div class="cyber-card__image-wrapper">
+              <img
+                src="img/cyber-logistica-1.png"
+                alt="Fluxo de Cyber Logística Etapas 1 a 4: Armazenagem, Processamento do Pedido, Picking, Packing"
+                class="cyber-card__image"
+                loading="lazy"
+              />
+            </div>
+            <p class="cyber-card__description">
+              Do recebimento e armazenagem estratégica de insumos no estoque até a confirmação e processamento do pedido do cliente, localização e coleta rápida dos itens (picking), e embalagem final protetiva para envio (packing).
+            </p>
+          </div>
+        </article>
+
+        <!-- Card 2: Etapas 5 a 8 -->
+        <article class="cyber-card" aria-labelledby="cardTitle2">
+          <div class="cyber-card__content">
+            <h3 class="cyber-card__title" id="cardTitle2">Etapas 5 a 8: Expedição e Entrega</h3>
+            <div class="cyber-card__image-wrapper">
+              <img
+                src="img/cyber-logistica-2.png"
+                alt="Fluxo de Cyber Logística Etapas 5 a 8: Expedição e Nota Fiscal, Transporte e Last Mile, Rastreamento, Logística Reversa"
+                class="cyber-card__image"
+                loading="lazy"
+              />
+            </div>
+            <p class="cyber-card__description">
+              Geração de Nota Fiscal Eletrônica (NF-e) e etiquetagem rápida na expedição, coleta da transportadora ou correios com transporte Last Mile até o cliente, monitoramento com código de rastreio em tempo real, e a gestão eficiente da logística reversa para devoluções.
+            </p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== O QUE VOCÊ APRENDE ========== -->
+  <section class="section aprende" id="aprende" aria-labelledby="aprendeTitle">
+    <div class="container">
+      <div class="section__header">
+        <span class="section__badge">🧠 Conteúdo</span>
+        <h2 class="section__title" id="aprendeTitle">O Que Você Aprende</h2>
+        <p class="section__subtitle">Competências práticas e teóricas para o mercado de trabalho moderno.</p>
+      </div>
+
+      <div class="aprende__grid">
+        <div class="aprende-card" tabindex="0">
+          <div class="aprende-card__icon" aria-hidden="true">🚛</div>
+          <h3 class="aprende-card__title">Transporte e Distribuição</h3>
+          <p class="aprende-card__desc">Gerenciamento de rotas, modais de transporte e eficiência na entrega de produtos.</p>
+        </div>
+        <div class="aprende-card" tabindex="0">
+          <div class="aprende-card__icon" aria-hidden="true">🏭</div>
+          <h3 class="aprende-card__title">Armazenagem e Estoque</h3>
+          <p class="aprende-card__desc">Organização, controle e gerenciamento de produtos em centros de distribuição e depósitos.</p>
+        </div>
+        <div class="aprende-card" tabindex="0">
+          <div class="aprende-card__icon" aria-hidden="true">🔗</div>
+          <h3 class="aprende-card__title">Cadeia de Suprimentos</h3>
+          <p class="aprende-card__desc">Integração entre fornecedores, produção, estoque e entrega ao cliente final.</p>
+        </div>
+        <div class="aprende-card" tabindex="0">
+          <div class="aprende-card__icon" aria-hidden="true">📋</div>
+          <h3 class="aprende-card__title">Planejamento Logístico</h3>
+          <p class="aprende-card__desc">Estratégias para otimizar processos, reduzir custos e garantir prazos de entrega.</p>
+        </div>
+        <div class="aprende-card" tabindex="0">
+          <div class="aprende-card__icon" aria-hidden="true">🛒</div>
+          <h3 class="aprende-card__title">E-commerce e Operações Digitais</h3>
+          <p class="aprende-card__desc">Gestão de pedidos online, logística reversa e atendimento ao cliente no ambiente digital.</p>
+        </div>
+        <div class="aprende-card" tabindex="0">
+          <div class="aprende-card__icon" aria-hidden="true">🤝</div>
+          <h3 class="aprende-card__title">Negociação com Fornecedores</h3>
+          <p class="aprende-card__desc">Técnicas de compra, relacionamento com parceiros e gestão de contratos.</p>
+        </div>
+        <div class="aprende-card" tabindex="0">
+          <div class="aprende-card__icon" aria-hidden="true">⚙️</div>
+          <h3 class="aprende-card__title">Solução de Problemas Logísticos</h3>
+          <p class="aprende-card__desc">Identificação e resolução de gargalos operacionais com criatividade e eficiência.</p>
+        </div>
+        <div class="aprende-card" tabindex="0">
+          <div class="aprende-card__icon" aria-hidden="true">🌟</div>
+          <h3 class="aprende-card__title">Ética e Cidadania Profissional</h3>
+          <p class="aprende-card__desc">Desenvolvimento de valores, postura profissional e responsabilidade social no trabalho.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== OBJETIVOS DO CURSO ========== -->
+  <section class="section objetivos" id="objetivos" aria-labelledby="objetivosTitle">
+    <div class="container">
+      <div class="section__header">
+        <span class="section__badge">🎯 Objetivos</span>
+        <h2 class="section__title" id="objetivosTitle">Objetivos do Curso</h2>
+        <p class="section__subtitle">O que você vai conquistar ao concluir o Técnico em Logística.</p>
+      </div>
+
+      <div class="objetivos__list">
+        <div class="objetivo-item">
+          <div class="objetivo-item__number" aria-hidden="true">01</div>
+          <div class="objetivo-item__content">
+            <h3 class="objetivo-item__title">Logística como Ferramenta Estratégica</h3>
+            <p class="objetivo-item__desc">Compreender a logística como elemento central para a competitividade empresarial e o atendimento ao cliente.</p>
+          </div>
+        </div>
+        <div class="objetivo-item">
+          <div class="objetivo-item__number" aria-hidden="true">02</div>
+          <div class="objetivo-item__content">
+            <h3 class="objetivo-item__title">Processos da Logística Integrada</h3>
+            <p class="objetivo-item__desc">Conhecer e aplicar os processos que conectam produção, armazenagem, distribuição e consumidor final.</p>
+          </div>
+        </div>
+        <div class="objetivo-item">
+          <div class="objetivo-item__number" aria-hidden="true">03</div>
+          <div class="objetivo-item__content">
+            <h3 class="objetivo-item__title">Resolução de Problemas Reais</h3>
+            <p class="objetivo-item__desc">Desenvolver capacidade de análise e solução de problemas logísticos em ambientes empresariais reais.</p>
+          </div>
+        </div>
+        <div class="objetivo-item">
+          <div class="objetivo-item__number" aria-hidden="true">04</div>
+          <div class="objetivo-item__content">
+            <h3 class="objetivo-item__title">Planejamento de Operações</h3>
+            <p class="objetivo-item__desc">Planejar e gerenciar operações logísticas e cadeias de suprimentos com eficiência e inovação.</p>
+          </div>
+        </div>
+        <div class="objetivo-item">
+          <div class="objetivo-item__number" aria-hidden="true">05</div>
+          <div class="objetivo-item__content">
+            <h3 class="objetivo-item__title">Teoria Aliada à Prática</h3>
+            <p class="objetivo-item__desc">Relacionar os conhecimentos teóricos com experiências práticas do cotidiano profissional logístico.</p>
+          </div>
+        </div>
+        <div class="objetivo-item">
+          <div class="objetivo-item__number" aria-hidden="true">06</div>
+          <div class="objetivo-item__content">
+            <h3 class="objetivo-item__title">Preparação para o Mercado</h3>
+            <p class="objetivo-item__desc">Preparar o estudante para ingressar no mercado de trabalho ou continuar os estudos em nível superior.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PROJETOS DOS ALUNOS ========== -->
+  <section class="section projetos" id="projetos" aria-labelledby="projetosTitle">
+    <div class="container">
+      <div class="section__header">
+        <span class="section__badge">🚀 Projetos</span>
+        <h2 class="section__title" id="projetosTitle">Projetos dos Alunos</h2>
+        <p class="section__subtitle">
+          Conheça os projetos desenvolvidos pelos estudantes e veja como a logística se conecta ao
+          empreendedorismo, tecnologia, atendimento, organização e vendas.
+        </p>
+      </div>
+
+      <div class="projetos__grid">
+
+        <!-- Projeto 1: KéPudim Gourmet -->
+        <article class="projeto-card" aria-label="Projeto KéPudim Gourmet">
+          <div class="projeto-card__image-wrap">
+            <div class="projeto-card__emoji" aria-hidden="true">🍮</div>
+            <div class="projeto-card__overlay">
+              <span class="projeto-card__tag">E-commerce</span>
+            </div>
+          </div>
+          <div class="projeto-card__body">
+            <h3 class="projeto-card__title">KéPudim Gourmet</h3>
+            <p class="projeto-card__desc">
+              Projeto de e-commerce de doces, simulando catálogo, venda e atendimento ao cliente.
+              Um exemplo prático de logística aplicada ao comércio de alimentos.
+            </p>
+            <div class="projeto-card__tags">
+              <span class="tag tag--sm">E-commerce</span>
+              <span class="tag tag--sm">Atendimento</span>
+              <span class="tag tag--sm">Vendas</span>
+            </div>
+            <a
+              href="https://rafaelacorrea81.github.io/kepudim-gourmet/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn--primary btn--sm"
+              aria-label="Acessar o projeto KéPudim Gourmet em nova aba"
+            >
+              🔗 Acessar Projeto
+            </a>
+          </div>
+        </article>
+
+        <!-- Projeto 2: ImobTech Logística -->
+        <article class="projeto-card" aria-label="Projeto ImobTech Logística">
+          <div class="projeto-card__image-wrap">
+            <div class="projeto-card__emoji" aria-hidden="true">🏢</div>
+            <div class="projeto-card__overlay">
+              <span class="projeto-card__tag">Tecnologia</span>
+            </div>
+          </div>
+          <div class="projeto-card__body">
+            <h3 class="projeto-card__title">ImobTech Logística</h3>
+            <p class="projeto-card__desc">
+              Projeto com foco em soluções digitais, organização e apresentação comercial.
+              Demonstra como a tecnologia otimiza processos logísticos empresariais.
+            </p>
+            <div class="projeto-card__tags">
+              <span class="tag tag--sm">Tecnologia</span>
+              <span class="tag tag--sm">Organização</span>
+              <span class="tag tag--sm">Digital</span>
+            </div>
+            <a
+              href="https://rafaelacorrea81.github.io/imobtech-logistica/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn--primary btn--sm"
+              aria-label="Acessar o projeto ImobTech Logística em nova aba"
+            >
+              🔗 Acessar Projeto
+            </a>
+          </div>
+        </article>
+
+        <!-- Projeto 3: Pezinhos Mágicos -->
+        <article class="projeto-card" aria-label="Projeto Pezinhos Mágicos">
+          <div class="projeto-card__image-wrap">
+            <div class="projeto-card__emoji" aria-hidden="true">👟</div>
+            <div class="projeto-card__overlay">
+              <span class="projeto-card__tag">Vitrine Digital</span>
+            </div>
+          </div>
+          <div class="projeto-card__body">
+            <h3 class="projeto-card__title">Pezinhos Mágicos</h3>
+            <p class="projeto-card__desc">
+              Vitrine digital para apresentação de produtos e experiência de compra.
+              Explora a logística do varejo e a jornada do cliente no comércio online.
+            </p>
+            <div class="projeto-card__tags">
+              <span class="tag tag--sm">Vitrine</span>
+              <span class="tag tag--sm">Varejo</span>
+              <span class="tag tag--sm">Experiência</span>
+            </div>
+            <a
+              href="https://rafaelacorrea81.github.io/pezinhosmagicos"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn--primary btn--sm"
+              aria-label="Acessar o projeto Pezinhos Mágicos em nova aba"
+            >
+              🔗 Acessar Projeto
+            </a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== ESCOLHA SEU BRINDE ========== -->
+  <section class="section brindes" id="brindes" aria-labelledby="brindesTitle">
+    <div class="container">
+      <div class="section__header">
+        <span class="section__badge">🎁 Loja</span>
+        <h2 class="section__title" id="brindesTitle">Escolha seu Brinde</h2>
+        <p class="section__subtitle">
+          Explore os brindes criados para representar o Curso Técnico em Logística.
+          Esta é uma experiência simulada de e-commerce para a feira de cursos.
+        </p>
+      </div>
+
+      <!-- Botão para abrir o carrinho -->
+      <div class="brindes__cart-toggle">
+        <button class="btn btn--cart" id="openCartBtn" aria-label="Ver carrinho de brindes">
+          🛒 Ver Carrinho <span class="cart-badge cart-badge--inline" id="cartBadgeInline">0</span>
+        </button>
+      </div>
+
+      <div class="produtos__grid">
+
+        <!-- PRODUTO 1: Bloco de Notas -->
+        <article class="produto-card" aria-label="Bloco de notas do Curso Técnico em Logística">
+          <!-- Carrossel de imagens -->
+          <div class="carousel" id="carousel-bloco" role="region" aria-label="Imagens do Bloco de Notas" aria-roledescription="carrossel">
+            <div class="carousel__track" id="carouselTrack-bloco">
+              <div class="carousel__slide active">
+                <img
+                  src="img/bloco.jpg"
+                  alt="Bloco de notas personalizado do Curso Técnico em Logística – frente"
+                  class="carousel__img"
+                  loading="lazy"
+                  onerror="this.parentElement.innerHTML='<div class=\'carousel__placeholder\'>🗒️<br>Imagem do produto</div>'"
+                />
+              </div>
+              <div class="carousel__slide">
+                <img
+                  src="img/bloco1.png"
+                  alt="Bloco de notas personalizado do Curso Técnico em Logística – variação"
+                  class="carousel__img"
+                  loading="lazy"
+                  onerror="this.parentElement.innerHTML='<div class=\'carousel__placeholder\'>🗒️<br>Imagem do produto</div>'"
+                />
+              </div>
+            </div>
+            <button class="carousel__btn carousel__btn--prev" aria-label="Imagem anterior do Bloco de Notas" data-carousel="bloco">&#8249;</button>
+            <button class="carousel__btn carousel__btn--next" aria-label="Próxima imagem do Bloco de Notas" data-carousel="bloco">&#8250;</button>
+            <div class="carousel__dots" id="carouselDots-bloco" aria-label="Indicadores de imagem" role="tablist">
+              <button class="carousel__dot active" data-carousel="bloco" data-index="0" role="tab" aria-selected="true" aria-label="Imagem 1"></button>
+              <button class="carousel__dot" data-carousel="bloco" data-index="1" role="tab" aria-selected="false" aria-label="Imagem 2"></button>
+            </div>
+          </div>
+
+          <div class="produto-card__body">
+            <h3 class="produto-card__title">Bloco de Notas do Curso Técnico em Logística</h3>
+            <p class="produto-card__desc">
+              Bloco de notas personalizado com a identidade do Curso Técnico em Logística, ideal para anotações, planejamento e organização.
+            </p>
+            <div class="produto-card__price-row">
+              <span class="produto-card__price">🎁 Brinde da Feira</span>
+            </div>
+            <button
+              class="btn btn--primary btn--full"
+              data-product="Bloco de Notas do Curso Técnico em Logística"
+              onclick="addToCart(this)"
+              aria-label="Adicionar Bloco de Notas ao carrinho"
+            >
+              🛒 Adicionar ao Carrinho
+            </button>
+          </div>
+        </article>
+
+        <!-- PRODUTO 2: Botton -->
+        <article class="produto-card" aria-label="Botton do Curso Técnico em Logística">
+          <!-- Carrossel de imagens -->
+          <div class="carousel" id="carousel-botton" role="region" aria-label="Imagens do Botton" aria-roledescription="carrossel">
+            <div class="carousel__track" id="carouselTrack-botton">
+              <div class="carousel__slide active">
+                <img
+                  src="img/botton.png"
+                  alt="Botton personalizado do Curso Técnico em Logística – frente"
+                  class="carousel__img"
+                  loading="lazy"
+                  onerror="this.parentElement.innerHTML='<div class=\'carousel__placeholder\'>📍<br>Imagem do produto</div>'"
+                />
+              </div>
+              <div class="carousel__slide">
+                <img
+                  src="img/botton2.png"
+                  alt="Botton personalizado do Curso Técnico em Logística – variação"
+                  class="carousel__img"
+                  loading="lazy"
+                  onerror="this.parentElement.innerHTML='<div class=\'carousel__placeholder\'>📍<br>Imagem do produto</div>'"
+                />
+              </div>
+            </div>
+            <button class="carousel__btn carousel__btn--prev" aria-label="Imagem anterior do Botton" data-carousel="botton">&#8249;</button>
+            <button class="carousel__btn carousel__btn--next" aria-label="Próxima imagem do Botton" data-carousel="botton">&#8250;</button>
+            <div class="carousel__dots" id="carouselDots-botton" aria-label="Indicadores de imagem" role="tablist">
+              <button class="carousel__dot active" data-carousel="botton" data-index="0" role="tab" aria-selected="true" aria-label="Imagem 1"></button>
+              <button class="carousel__dot" data-carousel="botton" data-index="1" role="tab" aria-selected="false" aria-label="Imagem 2"></button>
+            </div>
+          </div>
+
+          <div class="produto-card__body">
+            <h3 class="produto-card__title">Botton do Curso Técnico em Logística</h3>
+            <p class="produto-card__desc">
+              Botton personalizado do Curso Técnico em Logística, criado para divulgar a identidade do curso de forma criativa.
+            </p>
+            <div class="produto-card__price-row">
+              <span class="produto-card__price">🎁 Brinde da Feira</span>
+            </div>
+            <button
+              class="btn btn--primary btn--full"
+              data-product="Botton do Curso Técnico em Logística"
+              onclick="addToCart(this)"
+              aria-label="Adicionar Botton ao carrinho"
+            >
+              🛒 Adicionar ao Carrinho
+            </button>
+          </div>
+        </article>
+
+        <!-- PRODUTO 3: Brinde 3D -->
+        <article class="produto-card" aria-label="Brinde 3D do Curso de Logística">
+          <!-- Carrossel de imagens -->
+          <div class="carousel" id="carousel-brinde3d" role="region" aria-label="Imagens do Brinde 3D" aria-roledescription="carrossel">
+            <div class="carousel__track" id="carouselTrack-brinde3d">
+              <div class="carousel__slide active">
+                <img
+                  src="img/brinde1.png"
+                  alt="Chaveiro/suporte para celular impresso em 3D – Logística – ângulo 1"
+                  class="carousel__img"
+                  loading="lazy"
+                  onerror="this.parentElement.innerHTML='<div class=\'carousel__placeholder\'>🔑<br>Imagem do produto</div>'"
+                />
+              </div>
+              <div class="carousel__slide">
+                <img
+                  src="img/brinde3.png"
+                  alt="Chaveiro/suporte para celular impresso em 3D – Logística – ângulo 2"
+                  class="carousel__img"
+                  loading="lazy"
+                  onerror="this.parentElement.innerHTML='<div class=\'carousel__placeholder\'>🔑<br>Imagem do produto</div>'"
+                />
+              </div>
+              <div class="carousel__slide">
+                <img
+                  src="img/brinde4.png"
+                  alt="Chaveiro/suporte para celular impresso em 3D – Logística – ângulo 3"
+                  class="carousel__img"
+                  loading="lazy"
+                  onerror="this.parentElement.innerHTML='<div class=\'carousel__placeholder\'>🔑<br>Imagem do produto</div>'"
+                />
+              </div>
+              <div class="carousel__slide">
+                <img
+                  src="img/brinde5.png"
+                  alt="Chaveiro/suporte para celular impresso em 3D – Logística – ângulo 4"
+                  class="carousel__img"
+                  loading="lazy"
+                  onerror="this.parentElement.innerHTML='<div class=\'carousel__placeholder\'>🔑<br>Imagem do produto</div>'"
+                />
+              </div>
+            </div>
+            <button class="carousel__btn carousel__btn--prev" aria-label="Imagem anterior do Brinde 3D" data-carousel="brinde3d">&#8249;</button>
+            <button class="carousel__btn carousel__btn--next" aria-label="Próxima imagem do Brinde 3D" data-carousel="brinde3d">&#8250;</button>
+            <div class="carousel__dots" id="carouselDots-brinde3d" aria-label="Indicadores de imagem" role="tablist">
+              <button class="carousel__dot active" data-carousel="brinde3d" data-index="0" role="tab" aria-selected="true" aria-label="Imagem 1"></button>
+              <button class="carousel__dot" data-carousel="brinde3d" data-index="1" role="tab" aria-selected="false" aria-label="Imagem 2"></button>
+              <button class="carousel__dot" data-carousel="brinde3d" data-index="2" role="tab" aria-selected="false" aria-label="Imagem 3"></button>
+              <button class="carousel__dot" data-carousel="brinde3d" data-index="3" role="tab" aria-selected="false" aria-label="Imagem 4"></button>
+            </div>
+          </div>
+
+          <div class="produto-card__body">
+            <h3 class="produto-card__title">Brinde 3D do Curso de Logística</h3>
+            <p class="produto-card__desc">
+              Chaveiro/suporte para celular impresso em 3D, desenvolvido como brinde criativo para representar inovação, tecnologia e logística.
+            </p>
+            <div class="produto-card__price-row">
+              <span class="produto-card__price">🎁 Brinde da Feira</span>
+            </div>
+            <button
+              class="btn btn--primary btn--full"
+              data-product="Brinde 3D do Curso de Logística"
+              onclick="addToCart(this)"
+              aria-label="Adicionar Brinde 3D ao carrinho"
+            >
+              🛒 Adicionar ao Carrinho
+            </button>
+          </div>
+        </article>
+
+      </div><!-- /.produtos__grid -->
+    </div>
+
+    <!-- ========== PAINEL DO CARRINHO ========== -->
+    <div class="cart-overlay" id="cartOverlay" aria-hidden="true"></div>
+    <aside class="cart-panel" id="cartPanel" role="dialog" aria-labelledby="cartTitle" aria-hidden="true">
+      <div class="cart-panel__header">
+        <h2 class="cart-panel__title" id="cartTitle">🛒 Seu Carrinho</h2>
+        <button class="cart-panel__close" id="closeCartBtn" aria-label="Fechar carrinho">✕</button>
+      </div>
+      <div class="cart-panel__body">
+        <ul class="cart-list" id="cartList" aria-live="polite" aria-label="Itens no carrinho">
+          <li class="cart-empty" id="cartEmpty">Nenhum brinde selecionado ainda.</li>
+        </ul>
+      </div>
+      <div class="cart-panel__footer">
+        <button class="btn btn--success btn--full" id="finalizarBtn" onclick="finalizarEscolha()" aria-label="Finalizar escolha de brindes">
+          ✅ Finalizar Escolha
+        </button>
+      </div>
+    </aside>
+
+    <!-- Modal de confirmação -->
+    <div class="modal-overlay" id="modalOverlay" role="dialog" aria-labelledby="modalTitle" aria-modal="true" aria-hidden="true">
+      <div class="modal">
+        <div class="modal__icon" aria-hidden="true">🎉</div>
+        <h2 class="modal__title" id="modalTitle">Escolha Confirmada!</h2>
+        <p class="modal__subtitle">Aqui está o resumo dos seus brindes:</p>
+        <ul class="modal__list" id="modalList" aria-label="Resumo dos brindes escolhidos"></ul>
+        <p class="modal__thanks">Obrigado por participar da Feira do Curso Técnico em Logística do CEET Vasco Coutinho! 🚛📦</p>
+        <button class="btn btn--primary" onclick="fecharModal()" aria-label="Fechar confirmação">Fechar</button>
+        <!-- Função WhatsApp (descomente e edite o número para ativar)
+        <button class="btn btn--whatsapp" onclick="enviarWhatsApp()" aria-label="Enviar escolha por WhatsApp">
+          📱 Enviar por WhatsApp
+        </button>
+        -->
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ========== MERCADO DE TRABALHO ========== -->
+  <section class="section mercado" id="mercado" aria-labelledby="mercadoTitle">
+    <div class="container">
+      <div class="section__header">
+        <span class="section__badge">💼 Carreira</span>
+        <h2 class="section__title" id="mercadoTitle">Mercado de Trabalho</h2>
+        <p class="section__subtitle">
+          O campo de atuação para o profissional Técnico em Logística é promissor e muito requisitado pelo
+          mercado de trabalho. Esse profissional pode atuar no embarque, desembarque, transporte de cargas,
+          gerenciamento de redes de distribuição, negociação com fornecedores, acompanhamento de processos de
+          compra e venda e controle de estoque.
+        </p>
+      </div>
+
+      <div class="mercado__grid">
+        <div class="mercado-card">
+          <div class="mercado-card__icon" aria-hidden="true">🚚</div>
+          <h3 class="mercado-card__title">Transporte de Cargas</h3>
+        </div>
+        <div class="mercado-card">
+          <div class="mercado-card__icon" aria-hidden="true">⚓</div>
+          <h3 class="mercado-card__title">Embarque e Desembarque</h3>
+        </div>
+        <div class="mercado-card">
+          <div class="mercado-card__icon" aria-hidden="true">🏭</div>
+          <h3 class="mercado-card__title">Centros de Distribuição</h3>
+        </div>
+        <div class="mercado-card">
+          <div class="mercado-card__icon" aria-hidden="true">📦</div>
+          <h3 class="mercado-card__title">Controle de Estoque</h3>
+        </div>
+        <div class="mercado-card">
+          <div class="mercado-card__icon" aria-hidden="true">💰</div>
+          <h3 class="mercado-card__title">Compras e Vendas</h3>
+        </div>
+        <div class="mercado-card">
+          <div class="mercado-card__icon" aria-hidden="true">🚢</div>
+          <h3 class="mercado-card__title">Setor Portuário</h3>
+        </div>
+        <div class="mercado-card">
+          <div class="mercado-card__icon" aria-hidden="true">💊</div>
+          <h3 class="mercado-card__title">Indústrias Farmacêuticas</h3>
+        </div>
+        <div class="mercado-card">
+          <div class="mercado-card__icon" aria-hidden="true">🍎</div>
+          <h3 class="mercado-card__title">Indústrias Alimentícias</h3>
+        </div>
+        <div class="mercado-card">
+          <div class="mercado-card__icon" aria-hidden="true">🚂</div>
+          <h3 class="mercado-card__title">Setor Ferroviário</h3>
+        </div>
+        <div class="mercado-card">
+          <div class="mercado-card__icon" aria-hidden="true">🛒</div>
+          <h3 class="mercado-card__title">Comércio Eletrônico</h3>
+        </div>
+      </div>
+
+      <div class="mercado__cta">
+        <div class="mercado__stat">
+          <span class="mercado__stat-number">+500k</span>
+          <span class="mercado__stat-label">Vagas no Brasil</span>
+        </div>
+        <div class="mercado__stat">
+          <span class="mercado__stat-number">10+</span>
+          <span class="mercado__stat-label">Setores de Atuação</span>
+        </div>
+        <div class="mercado__stat">
+          <span class="mercado__stat-number">🚀</span>
+          <span class="mercado__stat-label">Crescimento Constante</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CONTATO / CHAMADA FINAL ========== -->
+  <section class="section contato" id="contato" aria-labelledby="contatoTitle">
+    <div class="container">
+      <div class="contato__hero">
+        <span class="section__badge">📬 Fale Conosco</span>
+        <h2 class="section__title section__title--light" id="contatoTitle">
+          Gostou do curso? Venha conhecer o Técnico em Logística do CEET Vasco Coutinho.
+        </h2>
+        <p class="contato__subtitle">
+          Entre em contato, siga nossas redes sociais e saiba como se matricular!
+        </p>
+      </div>
+
+      <div class="contato__cards">
+
+        <!-- QR Code -->
+        <div class="contato-card">
+          <div class="contato-card__icon" aria-hidden="true">📱</div>
+          <h3 class="contato-card__title">QR Code</h3>
+          <div class="qrcode-placeholder" aria-label="Espaço para QR Code do curso">
+            <!-- EDITE AQUI: Substitua este placeholder pelo seu QR Code real -->
+            <!-- Você pode usar um <img src="img/qrcode.png" alt="QR Code do Curso Técnico em Logística" /> -->
+            <div class="qrcode-box">
+              <div class="qrcode-grid" aria-hidden="true">
+                <div></div><div></div><div></div><div></div><div></div>
+                <div></div><div></div><div></div><div></div><div></div>
+                <div></div><div></div><div></div><div></div><div></div>
+                <div></div><div></div><div></div><div></div><div></div>
+                <div></div><div></div><div></div><div></div><div></div>
+              </div>
+              <span class="qrcode-label">Insira seu QR Code aqui</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Instagram -->
+        <div class="contato-card">
+          <div class="contato-card__icon" aria-hidden="true">📸</div>
+          <h3 class="contato-card__title">Instagram</h3>
+          <!-- EDITE AQUI: Substitua o link e o arroba pelo Instagram real do curso -->
+          <a
+            href="https://instagram.com/SEUPERFIL"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="contato-card__link"
+            aria-label="Perfil do Instagram do Curso Técnico em Logística"
+          >
+            @logistica.ceet
+          </a>
+          <p class="contato-card__note">Siga e acompanhe novidades!</p>
+        </div>
+
+        <!-- Site da escola -->
+        <div class="contato-card">
+          <div class="contato-card__icon" aria-hidden="true">🌐</div>
+          <h3 class="contato-card__title">Site da Escola</h3>
+          <!-- EDITE AQUI: Substitua o href pelo endereço real do site do CEET Vasco Coutinho -->
+          <a
+            href="https://ceetvasco.com.br"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="contato-card__link"
+            aria-label="Site oficial do CEET Vasco Coutinho"
+          >
+            ceetvasco.com.br
+          </a>
+          <p class="contato-card__note">Conheça a escola e os cursos!</p>
+        </div>
+
+      </div>
+
+      <!-- Formulário de interesse -->
+      <div class="contato__form-wrap">
+        <h3 class="contato__form-title">Demonstre seu Interesse!</h3>
+        <script>var submitted = false;</script>
+        <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) { document.getElementById('successMessage').style.display = 'block'; document.getElementById('interestForm').reset(); submitted = false; }"></iframe>
+        <form class="contato__form" id="interestForm" action="https://docs.google.com/forms/u/0/d/1Q1AVy_kpmVjG_-qEqoPhKrKXfF-m5L7_g8Ajdxhig5o/previewResponse" method="POST" target="hidden_iframe" onsubmit="submitted=true;" aria-label="Formulário de interesse no curso">
+          <div class="form-group">
+            <label for="formName" class="form-label">Nome completo *</label>
+            <input type="text" id="formName" name="entry.341625949" class="form-input" placeholder="Seu nome" required aria-required="true" />
+          </div>
+          <div class="form-group">
+            <label for="formPhone" class="form-label">WhatsApp / Telefone</label>
+            <input type="tel" id="formPhone" name="entry.61858732" class="form-input" placeholder="(27) 9 0000-0000" />
+          </div>
+          <div class="form-group">
+            <label for="formTurno" class="form-label">Turno de interesse</label>
+            <select id="formTurno" name="entry.181412568" class="form-input" aria-label="Selecione o turno de interesse">
+              <option value="">Selecione...</option>
+              <option value="Matutino">Matutino</option>
+              <option value="Vespertino">Vespertino</option>
+              <option value="Noturno">Noturno</option>
+            </select>
+          </div>
+          <div class="form-group checkbox-group" style="display: flex; gap: 8px; align-items: flex-start; margin-bottom: 1rem;">
+            <input type="checkbox" id="formLgpd" name="entry.2055596703" value="Aceito" required aria-required="true" style="margin-top: 4px;" />
+            <label for="formLgpd" class="form-label" style="font-size: 0.9em; font-weight: normal; margin-bottom: 0; line-height: 1.4;">
+              Declaro que estou ciente de que meus dados serão utilizados apenas para contato sobre o curso, conforme a LGPD.
+            </label>
+          </div>
+          <button type="submit" class="btn btn--primary btn--full" id="formSubmitBtn" aria-label="Enviar interesse no curso">
+            📩 Quero me inscrever!
+          </button>
+          <p id="successMessage" style="display:none; color: #28a745; font-weight: bold; margin-top: 15px; text-align: center; font-size: 0.95em;">
+            ✅ Obrigada! Seu interesse foi registrado com sucesso.
+          </p>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========== RODAPÉ ========== -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer__container">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <img
+            src="img/logo-logistica.png"
+            alt="Logo Curso Técnico em Logística"
+            class="footer__logo"
+            onerror="this.style.display='none'"
+          />
+          <div class="footer__brand-text">
+            <strong>Curso Técnico em Logística</strong>
+            <span>CEET Vasco Coutinho</span>
+          </div>
+        </div>
+
+        <div class="footer__links">
+          <h4 class="footer__links-title">Navegação</h4>
+          <ul class="footer__nav" aria-label="Links de navegação do rodapé">
+            <li><a href="#inicio">Início</a></li>
+            <li><a href="#sobre">Sobre o Curso</a></li>
+            <li><a href="#projetos">Projetos</a></li>
+            <li><a href="#brindes">Brindes</a></li>
+            <li><a href="#mercado">Mercado de Trabalho</a></li>
+            <li><a href="#contato">Contato</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__projetos">
+          <h4 class="footer__links-title">Projetos dos Alunos</h4>
+          <ul class="footer__nav" aria-label="Links para projetos dos alunos">
+            <li><a href="https://rafaelacorrea81.github.io/kepudim-gourmet/" target="_blank" rel="noopener noreferrer">KéPudim Gourmet</a></li>
+            <li><a href="https://rafaelacorrea81.github.io/imobtech-logistica/" target="_blank" rel="noopener noreferrer">ImobTech Logística</a></li>
+            <li><a href="https://rafaelacorrea81.github.io/pezinhosmagicos" target="_blank" rel="noopener noreferrer">Pezinhos Mágicos</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Apoio e Realização -->
+      <div class="footer__realizacao" aria-label="Apoio e Realização">
+        <h4 class="footer__links-title">Apoio e Realização</h4>
+        <div class="footer__logos-container">
+          <img src="img/logo-vasco-coutinho.png" alt="Logo CEET Vasco Coutinho" class="footer__inst-logo" />
+          <img src="img/logo-20-anos.png" alt="Logo 20 Anos CEET Vasco Coutinho" class="footer__inst-logo" />
+          <img src="img/logo-universidades.png" alt="Logo Universidades / Governo do Estado" class="footer__inst-logo" />
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p class="footer__copy">
+          © 2026 · <strong>Curso Técnico em Logística</strong> · CEET Vasco Coutinho · Feira de Cursos
+        </p>
+        <p class="footer__edu">
+          Projeto educacional desenvolvido para fins de aprendizagem. 📦🚛
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Botão voltar ao topo -->
+  <button class="back-to-top" id="backToTopBtn" aria-label="Voltar ao topo da página" title="Voltar ao topo">
+    ↑
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>

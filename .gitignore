@@ -1,0 +1,9 @@
+# Ignorar arquivos PDF grandes
+*.pdf
+
+# Ignorar capturas de tela soltas na raiz
+Captura de tela *.png
+Captura de tela*.png
+
+# Ignorar pastas de backup antigas
+OldFiles/
