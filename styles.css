@@ -201,7 +201,7 @@ button {
 
 .btn--cart {
   background: linear-gradient(135deg, var(--clr-accent), var(--clr-accent-dark));
-  color: var(--txt-dark);
+  color: var(--txt-white);
   padding: 0.6rem 1.25rem;
   border-radius: var(--radius-full);
   font-weight: 700;
@@ -512,9 +512,9 @@ button {
 
 .hero__badge {
   display: inline-block;
-  background: rgba(245,158,11,0.15);
-  border: 1px solid rgba(245,158,11,0.35);
-  color: var(--clr-accent);
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  color: #00c8ff;
   padding: 0.4rem 1.1rem;
   border-radius: var(--radius-full);
   font-size: 0.8rem;
