@@ -135,7 +135,7 @@ button {
   gap: var(--space-sm);
   padding: 0.75rem 1.5rem;
   border-radius: var(--radius-full);
-  font-weight: 600;
+  font-weight: 700;
   font-size: 0.9rem;
   font-family: var(--font-sans);
   letter-spacing: 0.02em;
@@ -152,36 +152,41 @@ button {
 }
 
 .btn--primary {
-  background: linear-gradient(135deg, var(--clr-primary-light), var(--clr-primary));
-  color: var(--txt-white);
-  box-shadow: 0 4px 15px rgba(15,76,158,0.4);
+  background: #005AA7 !important;
+  color: #FFFFFF !important;
+  border: 1px solid rgba(0, 90, 167, 0.2) !important;
+  box-shadow: 0 2px 8px rgba(0, 90, 167, 0.15) !important;
 }
 .btn--primary:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(15,76,158,0.6);
-  background: linear-gradient(135deg, var(--clr-primary), var(--clr-primary-dark));
+  background: #003B73 !important;
+  color: #FFFFFF !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 12px rgba(0, 90, 167, 0.25) !important;
 }
 
 .btn--accent {
-  background: linear-gradient(135deg, var(--clr-accent), var(--clr-accent-dark));
-  color: var(--txt-dark);
-  box-shadow: 0 4px 15px rgba(245,158,11,0.4);
+  background: #005AA7 !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 2px 8px rgba(0, 90, 167, 0.15) !important;
   font-weight: 700;
 }
 .btn--accent:hover {
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-accent);
+  background: #003B73 !important;
+  color: #FFFFFF !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 12px rgba(0, 90, 167, 0.25) !important;
 }
 
 .btn--outline {
-  background: transparent;
-  color: var(--txt-white);
-  border-color: rgba(255,255,255,0.4);
+  background: #FFFFFF !important;
+  color: #002D5E !important;
+  border: 2px solid #005AA7 !important;
 }
 .btn--outline:hover {
-  background: rgba(255,255,255,0.1);
-  border-color: var(--txt-white);
-  transform: translateY(-2px);
+  background: #EAF4FF !important;
+  color: #002D5E !important;
+  border-color: #003B73 !important;
+  transform: translateY(-2px) !important;
 }
 
 .btn--success {
@@ -268,13 +273,13 @@ button {
 /* Tags reutilizáveis */
 .tag {
   display: inline-block;
-  background: rgba(0, 86, 179, 0.06);
-  border: 1px solid rgba(0, 86, 179, 0.15);
-  color: var(--clr-primary);
+  background: #EAF4FF;
+  border: 1.5px solid #005AA7;
+  color: #002D5E;
   padding: 0.25rem 0.75rem;
   border-radius: var(--radius-full);
   font-size: 0.75rem;
-  font-weight: 500;
+  font-weight: 600;
 }
 .tag--sm {
   font-size: 0.7rem;
@@ -1045,11 +1050,11 @@ button {
 .produto-card__price {
   font-weight: 700;
   font-size: 1.05rem;
-  color: var(--clr-accent);
-  background: rgba(245,158,11,0.1);
+  color: #8B6508;
+  background: #FFFDF0;
   padding: 0.35rem 0.85rem;
   border-radius: var(--radius-full);
-  border: 1px solid rgba(245,158,11,0.25);
+  border: 1.5px solid #D4AF37;
 }
 
 /* ── CARROSSEL ── */
@@ -1397,15 +1402,15 @@ button {
 
 /* ── 14. CONTATO ── */
 .contato {
-  background: linear-gradient(135deg, #003B73 0%, #005AA7 55%, #002F5F 100%);
+  background: #F0F4F8;
   padding: 90px 24px;
-  border-top: 1px solid var(--border-glass);
+  border-top: 1px solid rgba(0, 86, 179, 0.08);
 }
 
 .contato__badge {
   background: #EAF4FF;
   color: #005AA7;
-  border: 1px solid rgba(0, 90, 167, 0.25);
+  border: 1px solid #005AA7;
   font-weight: 700;
   padding: 10px 22px;
   border-radius: 999px;
@@ -1418,15 +1423,16 @@ button {
 .contato h2 {
   font-size: clamp(2rem, 4vw, 3.2rem);
   font-weight: 800;
-  color: #FFFFFF;
+  color: #002D5E;
   text-align: center;
   max-width: 900px;
   margin: 0 auto;
   line-height: 1.2;
 }
 
-.contato p {
-  color: #D7ECFF;
+.contato p,
+.contato__subtitle {
+  color: #4A5D78;
   font-size: 1.1rem;
   text-align: center;
   margin-top: 16px;
@@ -1447,16 +1453,16 @@ button {
   border-radius: 24px;
   padding: 36px 28px;
   text-align: center;
-  box-shadow: 0 18px 45px rgba(0, 59, 115, 0.18);
-  border: 1px solid rgba(0, 90, 167, 0.12);
+  box-shadow: 0 12px 30px rgba(0, 45, 94, 0.06);
+  border: 1px solid rgba(0, 90, 167, 0.08);
   transition: all var(--transition-mid);
 }
 
 .contato-card:hover,
 .contato__card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 24px 50px rgba(0, 59, 115, 0.25);
-  border-color: rgba(15,76,158,0.4);
+  box-shadow: 0 20px 40px rgba(0, 45, 94, 0.12);
+  border-color: rgba(0, 90, 167, 0.2);
 }
 
 .contato-card__icon,
@@ -1510,7 +1516,7 @@ button {
   margin: 18px auto 0;
   border-radius: 12px;
   border: 4px solid white;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
 }
 
 /* QR Code placeholder */
@@ -1518,36 +1524,37 @@ button {
 
 /* Formulário */
 .contato__form-wrap {
-  max-width: 540px;
+  max-width: 600px;
   margin-inline: auto;
-  background: var(--bg-card);
-  border: 1px solid var(--border-card);
-  border-radius: var(--radius-xl);
-  padding: var(--space-2xl);
+  background: #FFFFFF;
+  border: 1px solid rgba(0, 90, 167, 0.08);
+  border-radius: 24px;
+  padding: 48px;
+  box-shadow: 0 12px 30px rgba(0, 45, 94, 0.06);
 }
 .contato__form-title {
   font-family: var(--font-display);
-  font-size: 1.3rem;
-  font-weight: 700;
-  color: var(--txt-dark);
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #002D5E;
   text-align: center;
-  margin-bottom: var(--space-xl);
+  margin-bottom: 32px;
 }
 .contato__form { display: flex; flex-direction: column; gap: var(--space-md); }
 .form-group { display: flex; flex-direction: column; gap: var(--space-xs); }
-.form-label { font-size: 0.85rem; color: var(--txt-muted); font-weight: 500; }
+.form-label { font-size: 0.9rem; color: #002D5E; font-weight: 700; }
 .form-input {
-  background: var(--bg-card);
-  border: 1px solid var(--border-glass);
-  border-radius: var(--radius-md);
-  padding: 0.75rem var(--space-md);
-  color: var(--txt-light);
+  background: #FFFFFF;
+  border: 2px solid #CBD5E0;
+  border-radius: 12px;
+  padding: 14px 18px;
+  color: #2D3748;
   font-size: 0.95rem;
   font-family: var(--font-sans);
-  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+  transition: all var(--transition-fast);
   width: 100%;
 }
-.form-input::placeholder { color: var(--txt-muted); }
+.form-input::placeholder { color: #A0AEC0; }
 .form-input:focus {
   outline: none;
   border-color: var(--clr-primary-light);

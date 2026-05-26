@@ -642,8 +642,6 @@ function enviarWhatsApp() {
   if (!form) return;
 
   form.addEventListener('submit', (e) => {
-    e.preventDefault();
-
     const name   = $('#formName');
     const phone  = $('#formPhone');
     const turno  = $('#formTurno');
@@ -651,35 +649,37 @@ function enviarWhatsApp() {
 
     // Validação básica
     if (!name || name.value.trim().length < 2) {
+      e.preventDefault();
       name && name.focus();
       showFormError(name, 'Por favor, informe seu nome completo.');
       return;
     }
 
-    // Feedback visual de sucesso
-    if (submitBtn) {
-      submitBtn.innerHTML = '✅ Interesse registrado! Obrigado!';
-      submitBtn.disabled = true;
-      submitBtn.style.background = 'linear-gradient(135deg, #10b981, #059669)';
+    if (!phone || phone.value.trim().length < 8) {
+      e.preventDefault();
+      phone && phone.focus();
+      showFormError(phone, 'Por favor, informe seu WhatsApp ou telefone.');
+      return;
     }
 
-    // Aqui você pode integrar com Formspree, Google Forms, etc.
-    // Exemplo Formspree:
-    // fetch(form.action, { method: 'POST', body: new FormData(form), headers: { 'Accept': 'application/json' } })
+    if (!turno || !turno.value) {
+      e.preventDefault();
+      turno && turno.focus();
+      showFormError(turno, 'Por favor, selecione seu turno de interesse.');
+      return;
+    }
 
-    console.log('Interesse registrado:', {
-      nome:  name?.value.trim(),
-      fone:  phone?.value.trim(),
-      turno: turno?.value,
-    });
+    // Permite a submissão ao hidden_iframe, e altera o botão de envio temporariamente
+    if (submitBtn) {
+      submitBtn.innerHTML = '⏳ Enviando...';
+      submitBtn.disabled = true;
+    }
 
-    // Resetar após 4 segundos
+    // Resetar estado do botão após 4 segundos
     setTimeout(() => {
-      form.reset();
       if (submitBtn) {
         submitBtn.innerHTML = '📩 Quero me inscrever!';
         submitBtn.disabled = false;
-        submitBtn.style.background = '';
       }
     }, 4000);
   });
