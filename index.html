@@ -834,41 +834,8 @@
       </div>
 
       <!-- Formulário de interesse -->
-      <div class="contato__form-wrap">
-        <h3 class="contato__form-title">Demonstre seu Interesse!</h3>
-        <script>var submitted = false;</script>
-        <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) { document.getElementById('successMessage').style.display = 'block'; document.getElementById('interestForm').reset(); submitted = false; }"></iframe>
-        <form class="contato__form" id="interestForm" action="https://docs.google.com/forms/d/e/1FAIpQLScHnqEYiBeRBq6jAd_pd11oGtO70-I09pP59ZcFoYgldgmuew/formResponse" method="POST" target="hidden_iframe" onsubmit="submitted=true;" aria-label="Formulário de interesse no curso">
-          <div class="form-group">
-            <label for="formName" class="form-label">Nome completo *</label>
-            <input type="text" id="formName" name="entry.341625949" class="form-input" placeholder="Seu nome" required aria-required="true" />
-          </div>
-          <div class="form-group">
-            <label for="formPhone" class="form-label">WhatsApp / Telefone</label>
-            <input type="tel" id="formPhone" name="entry.61858732" class="form-input" placeholder="(27) 9 0000-0000" />
-          </div>
-          <div class="form-group">
-            <label for="formTurno" class="form-label">Turno de interesse</label>
-            <select id="formTurno" name="entry.181412568" class="form-input" aria-label="Selecione o turno de interesse">
-              <option value="">Selecione...</option>
-              <option value="Matutino">Matutino</option>
-              <option value="Vespertino">Vespertino</option>
-              <option value="Noturno">Noturno</option>
-            </select>
-          </div>
-          <div class="form-group checkbox-group" style="display: flex; gap: 8px; align-items: flex-start; margin-bottom: 1rem;">
-            <input type="checkbox" id="formLgpd" name="entry.2055596703" value="Aceito" required aria-required="true" style="margin-top: 4px;" />
-            <label for="formLgpd" class="form-label" style="font-size: 0.9em; font-weight: normal; margin-bottom: 0; line-height: 1.4;">
-              Declaro que estou ciente de que meus dados serão utilizados apenas para contato sobre o curso, conforme a LGPD.
-            </label>
-          </div>
-          <button type="submit" class="btn btn--primary btn--full" id="formSubmitBtn" aria-label="Enviar interesse no curso">
-            📩 Quero me inscrever!
-          </button>
-          <p id="successMessage" style="display:none; color: #28a745; font-weight: bold; margin-top: 15px; text-align: center; font-size: 0.95em;">
-            ✅ Obrigada! Seu interesse foi registrado com sucesso.
-          </p>
-        </form>
+      <div class="contato__form-wrap" style="max-width: 680px; padding: var(--space-md);">
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScHnqEYiBeRBq6jAd_pd11oGtO70-I09pP59ZcFoYgldgmuew/viewform?embedded=true" width="100%" height="1119" frameborder="0" marginheight="0" marginwidth="0" style="max-width: 100%; display: block; border-radius: var(--radius-md);">Carregando…</iframe>
       </div>
 
     </div>
