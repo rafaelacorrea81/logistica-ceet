@@ -9,7 +9,7 @@
  *  4. Animações de entrada (Intersection Observer)
  *  5. Carrosséis de imagens nos produtos (inclui suporte a toque)
  *  6. Carrinho de brindes (localStorage)
- *  7. Modal de finalização
+ *  7. Modal de pagamento (QR Code do Instagram) e limpeza do carrinho
  *  8. Botão voltar ao topo
  *  9. Formulário de interesse (demonstrativo)
  */
@@ -549,8 +549,9 @@ function cartClose() {
 ══════════════════════════════════════ */
 
 /**
- * Abre o modal de confirmação com o resumo do carrinho.
- * Chamada pelo onclick no botão "Finalizar Escolha".
+ * Abre o modal de pagamento com o resumo do carrinho.
+ * O "pagamento" é seguir o Instagram do curso pelo QR Code.
+ * Chamada pelo onclick no botão "Finalizar Escolha e Pagar".
  */
 function finalizarEscolha() {
   const cart = cartLoad();
@@ -571,6 +572,9 @@ function finalizarEscolha() {
     });
   }
 
+  // Sempre começa na etapa de pagamento
+  modalMostrarEtapa('pagamento');
+
   const overlay = $('#modalOverlay');
   if (overlay) {
     overlay.classList.add('visible');
@@ -580,7 +584,26 @@ function finalizarEscolha() {
   cartClose();
 }
 
-/** Fecha o modal de confirmação */
+/** Alterna entre as etapas do modal: 'pagamento' ou 'confirmado' */
+function modalMostrarEtapa(etapa) {
+  const pagamento  = $('#modalStepPagamento');
+  const confirmado = $('#modalStepConfirmado');
+  if (pagamento)  pagamento.hidden  = etapa !== 'pagamento';
+  if (confirmado) confirmado.hidden = etapa !== 'confirmado';
+}
+
+/**
+ * Confirma o "pagamento" (seguir o Instagram):
+ * limpa o carrinho e mostra a mensagem de confirmação.
+ */
+function confirmarPagamento() {
+  cartSave([]);            // esvazia o carrinho (localStorage)
+  cartUpdateBadges();      // zera os contadores
+  cartRenderPanel();       // mostra "Nenhum brinde selecionado ainda."
+  modalMostrarEtapa('confirmado');
+}
+
+/** Fecha o modal de pagamento/confirmação */
 function fecharModal() {
   const overlay = $('#modalOverlay');
   if (overlay) {
